@@ -50,8 +50,8 @@ export default {
                 './src/assets/**/*.{svg,png,jpeg,jpg,webp,webm,mp4,mp3,webp,webm,woff,woff2,ttf}',
             ],
             output: {
-                chunkFileNames: 'scripts/[name].js',
-                entryFileNames: 'scripts/[name].js',
+                chunkFileNames: 'assets/scripts/[name].js',
+                entryFileNames: 'assets/scripts/[name].js',
                 assetFileNames: ({name}) => {
                     if (/\.css$/.test(name ?? '')) {
                         return 'assets/css/[name][extname]';
