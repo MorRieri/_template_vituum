@@ -1,5 +1,6 @@
+// Импорты исполняются первыми
 console.log('main js!')
 import './components/app.js'
 
-import initBannerSliders from './components/swiper.js'
-initBannerSliders(document)
+import './components/swiper.js'
+import '../templates/components/header/header.js'

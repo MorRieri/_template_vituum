@@ -3,7 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import pug from '@vituum/vite-plugin-pug'
 import pages from 'vituum/plugins/pages.js'
 import imports from "vituum/plugins/imports.js";
-// import concat from '@vituum/vite-plugin-concat'
+import autoprefixer from 'autoprefixer';
 
 export default {
     resolve: {
@@ -14,7 +14,11 @@ export default {
     base: './',
     plugins: [
         vituum(),
-        pug({root: '/src',}),
+        pug({
+            root: '/src',
+            options: { pretty: true }
+
+        }),
         imports({
             filenamePattern: {
                 'src/styles': '+.sass',
@@ -34,19 +38,27 @@ export default {
     assets: {
         fileExtensions: ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico', 'webp', 'mp4', 'webm', 'ogg', 'mp3', 'wav', 'flac', 'aac', 'woff', 'woff2', 'eot', 'ttf'],
     },
+    css: {
+        postcss: {
+            plugins: [
+                autoprefixer
+            ],
+        }
+    },
     build: {
         outDir: 'build',
         emptyOutDir: true,
         minify: false,
-        terserOptions: {
-            compress: false,
-            mangle: false,
-        },
+        // terserOptions: {
+        //     compress: false,
+        //     mangle: false,
+        //     keep_fnames: true,
+        // },
         rollupOptions: {
             input: [
                 './src/templates/pages/*.{pug,html}',
-                './src/styles/*.{css,scss,sass}',
-                './src/scripts/**/*.{js,ts}',
+                './src/*.{css,scss,sass}',
+                // './src/scripts/**/*.{js,ts}',
                 './src/assets/**/*.{svg,png,jpeg,jpg,webp,webm,mp4,mp3,webp,webm,woff,woff2,ttf}',
             ],
             output: {

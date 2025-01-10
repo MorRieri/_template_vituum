@@ -2,22 +2,17 @@
 
 Author: https://github.com/danyalll1/Vite-Pug-boilerplate
 
-## Project setup
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Разработка
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Check compiled and minifies production version
+### Билд
 ```
 npm run build
 ```
@@ -25,34 +20,16 @@ npm run build
 ### Src and hrefs
   All src and hrefs(like images, scripts and styles) in .pug files must begining from /src ...
 
-### scripts and css
-  You can import all scripts in /src/scripts/app.js and call it in your layout.pug
-  layout.pug :
+### Подключение скриптов и стилей
+  Скрипты и стили подключаются в layout
   ```
  html(lang="ru")
   head
     link(rel="stylesheet" href="/src/styles/app.sass")
     script(type='module' src="/src/scripts/app.js")
   ```
-### svg and images
 
-Your pug file:
-```
-#svg
-header.header
-    .container
-        .header__container
-            .header__top
-                |copyright
-            .header__bottom
-                .header__logo
-                    include ../../../assets/img/header/vite.svg  <----svg inline
-
-
-#image
-section.top
-    .container
-        h1.section-title Vituum + Pug Template
-        .top__content
-            img(src="/src/assets/img/top/Vituum.png")
-```
+### Javascript
+  - Библиотеки, установленние через npm генерятся в файл libs.js
+  - JS к конкретным компонентам можно создавать в файле компонента и импортировать в src/scripts/index.js в нужном порядке
+  - JS относящийся к нескольким компонентам можно создавать в папке src/scripts/components

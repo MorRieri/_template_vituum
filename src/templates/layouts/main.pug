@@ -1,15 +1,14 @@
 doctype html
 html(lang="ru-RU")
   head
-    include head
+    include ./components/head
+    include ./components/preloader
     link(rel="stylesheet" href="/src/styles/index.sass")
+    script(type="module" src="/src/scripts/index.js")
   body
     include ../components/header/header.pug
     main
       block content
     include ../components/footer/footer.pug
-  //script(src="/scripts/libs.js")
-  script(type="module" src="/src/scripts/index.js")
-
 
 
