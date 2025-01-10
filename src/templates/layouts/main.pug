@@ -1,0 +1,15 @@
+doctype html
+html(lang="ru-RU")
+  head
+    include head
+    link(rel="stylesheet" href="/src/styles/index.sass")
+  body
+    include ../components/header/header.pug
+    main
+      block content
+    include ../components/footer/footer.pug
+  //script(src="/scripts/libs.js")
+  script(type="module" src="/src/scripts/index.js")
+
+
+

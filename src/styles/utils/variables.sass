@@ -1,0 +1,45 @@
+
+html
+  --container: 1392px
+  @media(max-width: 1472px)
+    --container: calc(100vw - 80px)
+  @media(max-width: 992px)
+    --container: calc(100vw - 32px)
+
+  --c-surface-accent: #365956
+  --c-surface-accent-hovered: #2e4644
+  --c-surfice-accent-opacity: rgba(54, 89, 86, 0.5)
+  --c-surface-subdued: #F5F4F4
+  --c-surface-subdued-hovered: #cecaca
+  --c-surface-primary: #e4e4e4
+  --c-surface-primary-hovered: #b6b4b2
+  --c-surface-default: #fff
+
+  --c-text-dark: #202e2c
+  --c-text-subdued: #555554
+  --c-text-disabled: #999999
+  --c-text-white: #FFFFFF
+  --c-text-accent: #365956
+  --c-text-accent-hovered: #2e4644
+
+  --c-success: #008060
+  --c-error: #D72C0D
+
+  --border-color: rgba(0, 0, 0, 0.03)
+  --border-corner: 4px
+
+  --g-24: 24px
+  --g-32: clamp(16px, calc(16px + (32 - 16) * ((100vw - 1024px) / (1920 - 1024))), 32px)
+  --g-elements: clamp(8px, calc(8px + (24 - 8) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+  --g-content: clamp(24px, calc(24px + (40 - 24) * ((100vw - 1024px) / (1920 - 1024))), 48px)
+  --g-section-inner: clamp(16px, calc(16px + (64 - 16) * ((100vw - 1024px) / (1920 - 1024))), 64px)
+  --g-section: clamp(56px, calc(56px + (120 - 56) * ((100vw - 1024px) / (1920 - 1024))), 120px)
+  --g-content_cards: clamp(32px, calc(32px + (118 - 32) * ((100vw - 1024px) / (1920 - 1024))), 118px)
+
+  --fs-16: 16px
+  --fs-18: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+  --fs-20: clamp(16px, calc(16px + (20 - 16) * ((100vw - 1024px) / (1920 - 1024))), 20px)
+  --fs-24: clamp(18px, calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+  --fs-28: clamp(20px, calc(20px + (28 - 20) * ((100vw - 1024px) / (1920 - 1024))), 28px)
+
+  --transition: 0.18s ease-in-out

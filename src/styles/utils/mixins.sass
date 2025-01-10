@@ -1,0 +1,3 @@
+@mixin font-clamp($min, $max, $breakpoint)
+  font-size: clamp($min, calc($min + ($max - $min) * ((100vw - $breakpoint * 1px) / (1920 - $breakpoint))), $max)
+
