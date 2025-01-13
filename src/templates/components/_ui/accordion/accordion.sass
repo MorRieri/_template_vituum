@@ -1,0 +1,55 @@
+.accordion
+  position: relative
+  overflow: hidden
+  @media(max-width: 768px)
+    padding: 4px
+  & + .accordion
+  &:hover,
+  &:focus
+    .accordion--button
+  &.is_open
+    .accordion--content
+      pointer-events: auto
+      grid-template-rows: 1fr
+      opacity: 1
+    .icon
+      transform: scaleY(-1)
+      transform-origin: center
+  &--button
+    transition: var(--transition)
+    cursor: pointer
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    padding: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px) 0
+    gap: 24px
+    .accordion--button_text
+      transition: var(--transition)
+    .icon
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      flex-grow: 0
+      height: 1.33em
+      width: 1.33em
+      transform: scaleY(1)
+      transition: var(--transition)
+      &:before
+        content: "\e904"
+  &--content
+    opacity: 0
+    display: grid
+    grid-template-rows: 0fr
+    pointer-events: none
+    overflow: hidden
+    transition: grid-template-rows 0.21s ease-out
+    .is_cascade
+      width: 100%
+      grid-row: 1 / span 2
+      overflow: hidden
+      & > *:first-child
+        margin-top: 0
+//& > *:last-child
+//  margin-bottom: 0
