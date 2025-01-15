@@ -25,7 +25,7 @@ export default {
             },
             paths: [
                 '/src/styles/*/**',
-                '/src/scripts/*/**',
+                // '/src/scripts/*/**',
                 '/src/assets/*/**'
             ],
         }),

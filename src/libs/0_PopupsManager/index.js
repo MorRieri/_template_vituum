@@ -1,6 +1,6 @@
 
-(()=>{
-  class PopupsManager{
+// (()=>{
+  export class PopupsManager{
     popups = [];
 
     register(name, options, hooks) {
@@ -83,7 +83,8 @@
     }
   }
 
-  window.PopupManager = new PopupsManager();
+  //indow.PopupManager = new PopupsManager();
+  // export default PopupsManager 
 
-})( typeof window !== "undefined" ? window : null);
+// })( typeof window !== "undefined" ? window : null);
 
